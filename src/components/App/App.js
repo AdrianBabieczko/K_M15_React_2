@@ -8,7 +8,7 @@ class App extends React.Component {
       <main className={styles.component}>
         <h1 className={styles.title}>My first React app</h1>
         <h2 className={styles.subtitle}>Hello world!</h2>
-        <List title={['Thing to do ', <sup key='1'>soon!</sup>]}>
+        <List title={['Thing to do ', <sup key='1'>soon!</sup>]} imgAddress={"http://uploads.kodilla.com/bootcamp/fer/11.react/space.png"}>
           <p>I'm planning on doing all there things sonner, rather than later!</p>
         </List>
       </main>
