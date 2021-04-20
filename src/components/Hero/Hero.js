@@ -10,7 +10,7 @@ const Hero = props => (
     </header>
 );
 
-Hero.PropTypes = {
+Hero.propTypes = {
     titleText: PropTypes.node.isRequired,
     image: PropTypes.string,
 }
