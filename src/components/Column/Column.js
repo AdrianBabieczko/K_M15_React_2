@@ -9,49 +9,49 @@ import Icon from '../Icon/Icon';
 class Column extends React.Component {
 
     state = {
-        cards: this.props.cards || [],
+      cards: this.props.cards || [],
     }
 
     static propTypes = {
-        title: PropTypes.string,
-        cards: PropTypes.array,
-        icon: PropTypes.string,
+      title: PropTypes.string,
+      cards: PropTypes.array,
+      icon: PropTypes.string,
     }
 
     addCard(cardTitle){
-       this.setState(st=> (
-           {
-               cards: [
-                   ...st.cards,
-                   {
-                       key: st.cards.length? st.cards[st.cards.length - 1].key+1:0,
-                       title: cardTitle
-                   }
-               ]
-           }
-       ))
+      this.setState(st=> (
+        {
+          cards: [
+            ...st.cards,
+            {
+              key: st.cards.length? st.cards[st.cards.length - 1].key+1:0,
+              title: cardTitle,
+            },
+          ],
+        }
+      ));
     }
 
     render() {
-        return (
-            <section className={styles.component}>
-                <h3 className={styles.title}>
-                <span className={styles.icon}>
-                        <Icon name={this.props.icon}/>
-                    </span>
-                    {this.props.title}
+      return (
+        <section className={styles.component}>
+          <h3 className={styles.title}>
+            <span className={styles.icon}>
+              <Icon name={this.props.icon}/>
+            </span>
+            {this.props.title}
                     
-                </h3>
-                <div>
-                    {this.state.cards.map(({key, ...cardProps}) => (
-                        <Card key={key} {...cardProps}/>
-                    ))}
-                </div>
-                <div>
-                    <Creator text={settings.cardCreatorText} action={cardTitle=>this.addCard(cardTitle)}/>
-                </div>
-            </section>
-        )
+          </h3>
+          <div>
+            {this.state.cards.map(({key, ...cardProps}) => (
+              <Card key={key} {...cardProps}/>
+            ))}
+          </div>
+          <div>
+            <Creator text={settings.cardCreatorText} action={cardTitle=>this.addCard(cardTitle)}/>
+          </div>
+        </section>
+      );
     }
 }
 
