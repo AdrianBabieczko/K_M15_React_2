@@ -18,7 +18,7 @@ class Column extends React.Component {
         icon: PropTypes.string,
     }
 
-    addColumn(cardTitle){
+    addCard(cardTitle){
        this.setState(st=> (
            {
                cards: [
@@ -48,7 +48,7 @@ class Column extends React.Component {
                     ))}
                 </div>
                 <div>
-                    <Creator text={settings.cardCreatorText} action={cardTitle=>this.addColumn(cardTitle)}/>
+                    <Creator text={settings.cardCreatorText} action={cardTitle=>this.addCard(cardTitle)}/>
                 </div>
             </section>
         )
