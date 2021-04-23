@@ -7,11 +7,10 @@ const mapStateToProps = (state, props) => ({
 });
 
 const mapDispatchToProps = (dispatch, props) => ({
-  addColumn: tit => dispatch(createActionAddColumn(
-    {
-      listId: props.id,
-      title:tit,
-    })),
+  addColumn: tilt => dispatch(createActionAddColumn({
+    listId: props.id,
+    title: tilt,
+  })),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(List);
