@@ -4,12 +4,14 @@ import styles from './Header.scss';
 import Container from '../Container/Cantainer';
 import Icon from '../Icon/Icon';
 import {settings} from '../../data/dataStore';
+import Search from '../Search/SearchContainer';
 
 class Header extends React.Component {
   render() {
     return (
       <header className={styles.component}>
-        <Container>
+        <Container>  
+          <Search/>
           <div className={styles.wrapper}>
             <Link className={styles.logo} to={'/'}>
               <Icon name={settings.defaultHeaderIconName}></Icon>
