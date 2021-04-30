@@ -26,6 +26,7 @@ class Search extends React.Component {
   handleChange(event){
     this.setState({
       value: event.target.value,
+      //TODO: zobaczyc czy jest uzywany w dalszej czesci kursu
       visibleButtons: event.target.value.length > 0,
     });
   }
