@@ -28,8 +28,7 @@ class Column extends React.Component {
             <span className={title}>
               <Icon name={icon}/>
             </span>
-            {this.props.title}
-                    
+            {title}       
           </h3>
           <div>
             {cards.map(crd => (
